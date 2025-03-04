@@ -1,13 +1,3 @@
-// 倒數動畫
-let count = 3;
-const countElement = document.querySelector('.count');
-
-setInterval(() => {
-    count--;
-    if (count < 1) count = 3;
-    countElement.textContent = count;
-}, 1000);
-
 // 隨機電影冷知識
 const movieFacts = [
     "🎥 影史上最長的電影是《Logistics》，長達 857 小時！",

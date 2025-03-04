@@ -3,7 +3,7 @@
 body {
     font-family: 'Noto Sans TC', sans-serif;
     text-align: center;
-    background-color: black;
+    background-color: #012A57; /* 威秀影城藍 */
     color: white;
     padding: 50px;
 }
@@ -13,44 +13,78 @@ body {
     margin: auto;
 }
 
-.countdown p {
-    font-size: 20px;
-    margin-bottom: 10px;
+/* 新增圖片樣式 */
+.loading-image {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
-.count {
-    font-size: 80px;
+/* 購票即將開始 */
+.loading-text {
+    font-size: 22px;
     font-weight: bold;
-    animation: countdown 3s infinite;
+    margin-bottom: 10px;
+    color: #FFD700; /* 金色 */
 }
 
-@keyframes countdown {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
-    100% { opacity: 1; transform: scale(1); }
+/* LOADING 文字 */
+.loading-spinner {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.message h1 {
-    font-size: 24px;
-    margin-top: 20px;
+.loading-spinner span {
+    display: block;
+    margin-bottom: 5px;
 }
 
+/* LOADING 點點動畫 */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dots div {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: dot-blink 1.4s infinite;
+}
+
+.dots div:nth-child(2) { animation-delay: 0.2s; }
+.dots div:nth-child(3) { animation-delay: 0.4s; }
+.dots div:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes dot-blink {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+/* 電影冷知識 */
 #funFact {
     font-size: 18px;
     font-style: italic;
     margin-top: 10px;
 }
 
+/* 重新整理按鈕 */
 button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #ffcc00;
+    background-color: #FFD700;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #ffaa00;
+    background-color: #FFAA00;
 }

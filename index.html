@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>威秀影城 - 系統維護中</title>
+  <title>威秀影城 - 購票即將開始</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
-  <div class="countdown">
-    <p>電影即將開始...</p>
-    <div class="count">3</div>
+  <img src="https://mx.design/upload/2023_05_05_1448130.jpg" alt="Loading Image" class="loading-image">
+
+  <h2 class="loading-text">🎟️ 購票即將開始...</h2>
+  <div class="loading-spinner">
+    <span>LOADING</span>
+    <div class="dots">
+      <div></div><div></div><div></div><div></div>
+    </div>
   </div>
 
-  <div class="message">
-    <h1>🎬 伺服器正在整理爆米花，請稍候！</h1>
-    <p id="funFact">載入電影冷知識中...</p>
-  </div>
+  <p id="funFact">載入電影冷知識中...</p>
 
   <button onclick="location.reload()">🔄 重新整理</button>
 </div>
